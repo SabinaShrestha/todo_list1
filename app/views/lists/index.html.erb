@@ -1,0 +1,8 @@
+<h1> List items </h1>
+<p><%= link_to 'New Item', new_list_path%></p>
+<% @lists.each do |list| %>
+  <h2><%= list.title %></h2>
+  <%= link_to 'Show', list_path(list) %>
+  <%= link_to 'Edit', edit_list_path(list) %>
+  <%= link_to 'Delete', list, method: :delete %>
+<% end %>

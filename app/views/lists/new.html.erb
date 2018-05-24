@@ -1,0 +1,19 @@
+<h1>
+  <%= @lists.id ? 'Edit Page' : 'Add Page' %>
+</h1>
+
+<%= form_for @lists do |l| %>
+  <%= l.label :title %>
+  <%= l.text_field :title %>
+  <br/></br/>
+  <%= l.label :place %>
+  <%= l.text_field :place %>
+  <br/><br/>
+  <%= l.label :body %>
+  <%= l.text_area :body %>
+  <br/><br/>
+  <%= l.label :complete %>
+  <%= l.check_box :complete %>
+  <br/><br/>
+  <%= l.submit %>
+<% end %>
